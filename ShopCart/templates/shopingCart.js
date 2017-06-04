@@ -1,4 +1,4 @@
-var shopingCartt = `
+var hoverShopingCart = `
     {{#if final}}
     {{#each final}}
         <li>

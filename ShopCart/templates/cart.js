@@ -1,6 +1,6 @@
-var wwwww = `
+var cartTemplate = `
 {{#if final}}
-<button type="button" class="btn btn-danger btn-lg center-block deleteCart">Delete cart</button>
+<button type="button" class="btn btn-danger btn-lg center-block deleteCart">Clear cart</button>
 <br>
 <div class="price">Products: <span id="product-price"></span></div>
 <div class="price">Subtotal: <span id="shiping-price"></span></div>

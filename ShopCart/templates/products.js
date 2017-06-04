@@ -1,4 +1,4 @@
-var product = `
+var productsTemplate = `
 <button type="button text-center" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#myModal">ADD NEW PRODUCT</button>
 
 <!-- Modal -->

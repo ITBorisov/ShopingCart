@@ -37,7 +37,7 @@ function startApp() {
                 final: products
             };
 
-            var template = Handlebars.compile(product);
+            var template = Handlebars.compile(productsTemplate);
             var data = template(productsContainer);
             document.getElementById('app-container').innerHTML += data;
         }
@@ -49,7 +49,7 @@ function startApp() {
                 final: cart
             };
 
-            var template = Handlebars.compile(wwwww);
+            var template = Handlebars.compile(cartTemplate);
             var data = template(cartContainer);
             document.getElementById('app-container').innerHTML += data;
 
@@ -71,12 +71,10 @@ function startApp() {
                 final: cart
             };
 
-            var template = Handlebars.compile(shopingCartt);
+            var template = Handlebars.compile(hoverShopingCart);
             var data = template(cartContainer);
             document.getElementById('drop-down').innerHTML += data;
         }
-
-
 
 
 
@@ -112,9 +110,14 @@ function startApp() {
                     products[i].title = title;
                     products[i].description = description;
                     products[i].price = Number(price);
-                    return;
                 }
             }
+
+            function reload(){
+                showProductView();
+            }
+            setTimeout(reload, 500);
+            showInfo('Product was edited successful!')
 
         });
 

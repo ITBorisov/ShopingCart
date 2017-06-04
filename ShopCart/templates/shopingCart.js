@@ -1,4 +1,5 @@
 var shopingCartt = `
+    {{#if final}}
     {{#each final}}
         <li>
             <span class="item">
@@ -14,5 +15,8 @@ var shopingCartt = `
             </span>
         </li>
     {{/each}}
+    {{else}}
+    <p>The cart is empty!</p>
+    {{/if}}
     <li class="divider"></li>
      `;

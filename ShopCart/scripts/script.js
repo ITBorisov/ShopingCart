@@ -117,7 +117,7 @@ function startApp() {
                 showProductView();
             }
             setTimeout(reload, 500);
-            showInfo('Product was edited successful!')
+            showInfo('Edit successfully')
 
         });
 
@@ -174,7 +174,7 @@ function startApp() {
                 showProductView();
             }
             setTimeout(reload, 500);
-            showInfo('New product is created')
+            showInfo('Created successfully')
 
         }
 
@@ -202,7 +202,7 @@ function startApp() {
                 }
             }
             localStorage.setItem("Products", JSON.stringify(products));
-            showInfo('Delete is successful!')
+            showInfo('Delete successfully')
         }
         
         //** cart **//

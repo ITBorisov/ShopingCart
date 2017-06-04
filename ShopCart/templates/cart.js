@@ -1,6 +1,13 @@
 var wwwww = `
 {{#if final}}
 <button type="button" class="btn btn-danger btn-lg center-block deleteCart">Delete cart</button>
+<br>
+<div class="price">Products: <span id="product-price"></span></div>
+<div class="price">Subtotal: <span id="shiping-price"></span></div>
+<div class="price">Total: <span id="total-price"></span></div>
+<hr>
+{{else}}
+<p>YOUR CART IS EMPTY</p>
 {{/if}}
 <br>
 <div class="container">    
@@ -22,12 +29,5 @@ var wwwww = `
   </div>
 </div>
 <hr>
-{{#if final}}
-<div class="price">Products: <span id="product-price"></span></div>
-<div class="price">Subtotal: <span id="shiping-price"></span></div>
-<div class="price">Total: <span id="total-price"></span></div>
-{{else}}
-<p>YOUR CART IS EMPTY</p>
-{{/if}}
 <br>
      `;

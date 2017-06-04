@@ -64,6 +64,21 @@ function startApp() {
 
         }
 
+        function showShopingCart() {
+            $('#drop-down').empty();
+
+            var cartContainer = {
+                final: cart
+            };
+
+            var template = Handlebars.compile(shopingCartt);
+            var data = template(cartContainer);
+            document.getElementById('drop-down').innerHTML += data;
+        }
+
+
+
+
 
         //** Products event **//
         $(document).on('click', '#add', function(){
@@ -109,6 +124,10 @@ function startApp() {
             var id = $(this).parent().parent().parent().attr("data-id");
             deleteProductFromProducts(id);
             showProductView()
+        });
+
+        $(document).on('mouseover', '#cart', function(){
+            showShopingCart()
         });
 
 

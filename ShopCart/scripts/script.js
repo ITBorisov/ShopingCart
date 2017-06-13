@@ -4,18 +4,19 @@ function startApp() {
         var products = [];
 
         class Item{
-            constructor(id, title, description, quantity, price){
+            constructor(id, title, description, quantity, price, picture){
                 this.id = id;
                 this.title = title;
                 this.description = description;
                 this.quantity = quantity;
                 this.price = price;
+                this.picture = picture;
             }
         }
 
-        var firstDefaultItem = new Item('1213', 'Banana', 'Banana from China', '1', '133');
-        var secondDefaultItem = new Item('224', 'Apples', 'Apples from Germany', '1', '4000');
-        var thirdDefaultItem = new Item('332', 'Oranges', 'Oranges from Greek', '1', '3000');
+        var firstDefaultItem = new Item('1213', 'Banana', 'Banana from China', '1', '133', '0');
+        var secondDefaultItem = new Item('224', 'Apples', 'Apples from Germany', '1', '4000', '1');
+        var thirdDefaultItem = new Item('332', 'Oranges', 'Oranges from Greek', '1', '3000', '2');
 
         products.push(firstDefaultItem);
         products.push(secondDefaultItem);
@@ -93,9 +94,10 @@ function startApp() {
             var dataTitle = $(this).parent().parent().parent().attr("data-title");
             var dataDescription = $(this).parent().parent().parent().attr("data-description");
             var price = Number($(this).parent().parent().parent().attr("data-price"));
+            var picture = Number($(this).parent().parent().parent().attr("data-img"));
+            console.log(picture);
 
-
-            addProductToCart(dataId, dataTitle, dataDescription, 1, price);
+            addProductToCart(dataId, dataTitle, dataDescription, 1, price, picture);
             increaseNumber();
         });
 
@@ -178,7 +180,7 @@ function startApp() {
 
         }
 
-        function addProductToCart (id, title, description, quantity, price) {
+        function addProductToCart (id, title, description, quantity, price, picture) {
             for (var i in cart) {
                 if (cart[i].id === id) {
                     cart[i].quantity += quantity;
@@ -187,11 +189,11 @@ function startApp() {
                 }
             }
 
-            var product = new Item(id, title, description, 1, price);
+            var product = new Item(id, title, description, 1, price, picture);
             cart.push(product);
 
             localStorage.setItem("Cart", JSON.stringify(cart));
-
+            console.log(cart)
         }
 
         function deleteProductFromProducts(id) {

@@ -41,10 +41,10 @@ var productsTemplate = `
 <div class="container">    
   <div class="row">
   {{#each final}}
-    <div class="col-sm-4" data-id="{{id}}" data-title="{{title}}" data-description="{{description}}" data-price="{{price}}" data-quantity="{{quantity}}">
+    <div class="col-sm-4" data-id="{{id}}" data-title="{{title}}" data-description="{{description}}" data-price="{{price}}" data-quantity="{{quantity}}" data-img="{{@index}}">
       <div class="panel panel-success">
         <div class="panel-heading">{{id}}.{{title}}</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="images/image{{picture}}.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer text-center">
         <p>Price: {{price}}</p>
         <p>{{description}}</p>

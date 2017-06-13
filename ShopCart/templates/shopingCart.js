@@ -4,7 +4,7 @@ var hoverShopingCart = `
         <li>
             <span class="item">
               <span class="item-left">
-                  <!--<img src="http://lorempixel.com/50/50/" alt="" />-->
+                 <img src="images/image{{picture}}.jpg" style="width: 50px" alt="" />
                   <span class="item-info">
                       <span>{{title}}</span>
                   </span>
